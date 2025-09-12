@@ -1,0 +1,13 @@
+.airflow
+airflow
+.airflow/
+.dockerignore
+
+.env
+/airflow
+
+logs
+/airflow/logs
+config
+config/
+
