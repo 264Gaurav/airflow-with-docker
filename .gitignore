@@ -1,13 +1,39 @@
-.airflow
-airflow
-.airflow/
-.dockerignore
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+*.pyc
 
+# Virtual env
 .env
-/airflow
+.venv/
+env/
+venv/
 
-logs
-/airflow/logs
-config
-config/
+# Airflow
+logs/
+airflow.db
+airflow-webserver.pid
+airflow.cfg
+unittests.cfg
+dags/__pycache__/
+plugins/__pycache__/
+airflow-webserver.pid
 
+# DVC
+.dvc/tmp/
+.dvc/cache/
+# Ignore data files (commit only .dvc pointers)
+models/
+data/raw/
+data/processed/
+models/
+
+# OS / Editor
+.DS_Store
+.idea/
+.vscode/
+
+# Docker
+.dockerignore
