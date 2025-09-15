@@ -6,7 +6,7 @@
 
 `source .airflow/bin/activate`
 
-### 1. Run this on your terminal inside project at base roor :
+### 1. Run this on your terminal inside project at base root :
 
 #### This docker-compose.yaml uses the official apache/airflow images and sets up scheduler, webserver (API), workers, triggerer, DB (Postgres), Redis, and an airflow-init service used for initialization
 
@@ -57,3 +57,25 @@ you can log in with airflow / airflow
 `docker compose up -d`
 
 Now, you can see the Airflow UI at localhost:8080
+
+## Stop your running containers and docker compose :
+
+`docker compose down`
+
+## Stop + remove containers and volumes (DB/logs reset):
+
+`docker compose down --volumes`
+
+## Stop + remove containers, volumes, and images (fresh start next time):
+
+`docker compose down --volumes --rmi all --remove-orphans`
+
+## To stop a specific container from the running containers list :
+
+#### 1. check running containers -
+
+`docker ps`
+
+#### 2. stop a running container by its id or name -
+
+`docker stop <container_id_or_name>`
