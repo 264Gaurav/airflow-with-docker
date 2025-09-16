@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 
@@ -29,7 +29,9 @@ def load_data(**context):
 with DAG(
     dag_id="etl_pipeline",
     start_date=datetime(2025, 9, 1),
-    schedule=None,    # run manually for now
+    #schedule=None,    # run manually for now
+    #schedule="*/5 * * * *",   # every 5 minutes
+    schedule=timedelta(minutes=50),   # every 5 minutes
     catchup=False,
     tags=["etl", "example"],
 ) as dag:
