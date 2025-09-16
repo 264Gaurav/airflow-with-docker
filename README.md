@@ -80,4 +80,4 @@ Now, you can see the Airflow UI at localhost:8080
 
 `docker stop <container_id_or_name>`
 
-## Know more about AI/LLM/ML projects handling and setup end-to-end : [AI/ML end-to-end project Readme](./src/SRC_Readme.md).
+## Know more about AI/LLM/ML projects handling and setup end-to-end : [AI/ML end-to-end project Readme](./dags/Readme.md).
